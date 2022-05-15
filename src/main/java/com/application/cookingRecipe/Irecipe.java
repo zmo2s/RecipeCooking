@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package com.application.cookingReceipe;
+package com.application.cookingRecipe;
 
 import org.springframework.data.repository.CrudRepository;
 
@@ -14,5 +14,6 @@ import org.springframework.data.repository.CrudRepository;
  */
 
 public interface Irecipe extends CrudRepository<Recipe, Long> {
+
 
 }

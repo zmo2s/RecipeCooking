@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package com.application.cookingReceipe;
+package com.application.cookingRecipe;
 
 import com.sun.istack.NotNull;
 import javax.persistence.Entity;
@@ -20,7 +20,7 @@ public class Recipe {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     @NotNull
-    private int id;
+    private Long id;
     @NotNull
     private String name;
     @NotNull
@@ -40,11 +40,92 @@ public class Recipe {
     @NotNull
     private String link;
 
+    public Long getId() {
+        return id;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public int getRating() {
+        return rating;
+    }
+
+    public String getNotes() {
+        return notes;
+    }
+
+    public String getType() {
+        return type;
+    }
+
+    public int getPrepTime() {
+        return prepTime;
+    }
+
+    public String getPhoto() {
+        return photo;
+    }
+
+    public int getPage() {
+        return page;
+    }
+
+    public String getIngredient() {
+        return ingredient;
+    }
+
+    public String getLink() {
+        return link;
+    }
+
+    public void setId(Long id) {
+        this.id = id;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public void setRating(int rating) {
+        this.rating = rating;
+    }
+
+    public void setNotes(String notes) {
+        this.notes = notes;
+    }
+
+    public void setType(String type) {
+        this.type = type;
+    }
+
+    public void setPrepTime(int prepTime) {
+        this.prepTime = prepTime;
+    }
+
+    public void setPhoto(String photo) {
+        this.photo = photo;
+    }
+
+    public void setPage(int page) {
+        this.page = page;
+    }
+
+    public void setIngredient(String ingredient) {
+        this.ingredient = ingredient;
+    }
+
+    public void setLink(String link) {
+        this.link = link;
+    }
+
+   
     public Recipe(){}
-    public Recipe(@NotNull int id, @NotNull String name, @NotNull int rating, @NotNull String notes, @NotNull 
+    public Recipe( @NotNull String name, @NotNull int rating, @NotNull String notes, @NotNull 
              String type, @NotNull int prepTime, @NotNull String photo, @NotNull int page, 
              @NotNull String ingredient, @NotNull String link) {
-        this.id = id;
+     
         this.name = name;
         this.rating = rating;
         this.notes = notes;
